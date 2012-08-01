@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SeniorDesign.Models.SmsMessage>
+
+<h2>@ViewBag.Title</h2>
+
+<div id="grid">
+    @(Html.Telerik().Grid(Model)
+                    .Name("Message_History")
+                    .DataBinding(dataBinding => dataBinding.Ajax().Select("_AjaxBinding", "Admin", new { username = ViewBag.username }))
+                    .Columns(c =>
+                    {
+                        c.Bound(m => m.To).Width(90);
+                        c.Bound(m => m.From).Width(90);
+                        c.Bound(m => m.Body).Sortable(false).Width(300);
+                        c.Bound(m => m.timestamp);
+                        c.Bound(m => m.status).Width(80);
+                        c.Bound(m => m.username)
+                            .ClientTemplate("<a href=\"Profile?username=<#= username #>\"><#= username #></a>")
+                        ;
+                    })
+                    .Sortable(s => s.OrderBy(sortOrder => sortOrder.Add(m => m.timestamp).Descending()))
+                    .Pageable(p => p.Style(GridPagerStyles.Status).PageOnScroll(true).PageSize(25))
+                    .Scrollable(c => c.Enabled(true).Height(500))
+                    .Resizable(resizing => resizing.Columns(true))
+                    .NoRecordsTemplate("Loading...")
+     )
+</div>

@@ -1,0 +1,170 @@
+﻿@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    <input type="hidden" name="quiznumber" value="1" />
+    <div class="editor-label">
+        To lose as much weight as you want, you have to crash diet.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q1" value="true" /> True<br />
+        <input type="radio" name="q1" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Insulin is a cure for diabetes.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q2" value="true" /> True<br />
+        <input type="radio" name="q2" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        You can lower high blood glucose with high-fiber foods.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q3" value="true" /> True<br />
+        <input type="radio" name="q3" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Eating too much sugar causes type 1 diabetes.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q4" value="true" /> True<br />
+        <input type="radio" name="q4" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Your body needs carbohydrates for energy.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q5" value="true" /> True<br />
+        <input type="radio" name="q5" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        You can catch diabetes from someone else.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q6" value="true" /> True<br />
+        <input type="radio" name="q6" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        An ultra low carb diet is the best diet for people with diabetes.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q7" value="true" /> True<br />
+        <input type="radio" name="q7" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        You are in charge of managing your diabetes. 
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q8" value="true" /> True<br />
+        <input type="radio" name="q8" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        If a person with diabetes feels okay, he or she is okay. 
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q9" value="true" /> True<br />
+        <input type="radio" name="q9" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Diabetes is a fairly easy disease to manage.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q10" value="true" /> True<br />
+        <input type="radio" name="q10" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        People with Type 1 diabetes can't eat sweets or chocolate.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q11" value="true" /> True<br />
+        <input type="radio" name="q11" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        If you have diabetes, you should only eat small amounts of starchy foods, such as bread, potatoes and pasta.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q12" value="true" /> True<br />
+        <input type="radio" name="q12" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Blood glucose monitoring can help you manage your diabetes. 
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q13" value="true" /> True<br />
+        <input type="radio" name="q13" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Fruit is a healthy food. Therefore, its okay to eat as much of it as you wish.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q14" value="true" /> True<br />
+        <input type="radio" name="q14" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        The main problem in diabetes is blood glucose.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q15" value="true" /> True<br />
+        <input type="radio" name="q15" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        People with diabetes are more likely to get colds or other illnesses.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q16" value="true" /> True<br />
+        <input type="radio" name="q16" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Smoking increases the risk of complications of diabetes.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q17" value="true" /> True<br />
+        <input type="radio" name="q17" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Insulin causes weight gain, and because obesity is unhealthy for you, one should avoid taking insulin.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q18" value="true" /> True<br />
+        <input type="radio" name="q18" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        You don't need to change your diabetes treatment plan unless your AIC is greater than 8%. 
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q19" value="true" /> True<br />
+        <input type="radio" name="q19" value="false" /> False
+    </div>
+
+    <div class="editor-label">
+        Insulin causes diabetes to get worse.
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q20" value="true" /> True<br />
+        <input type="radio" name="q20" value="false" /> False
+    </div>
+
+    @*<form name="input" action="html_form_action.asp" method="POST">*@
+    <br />
+    <input type="submit" value="Submit" />
+    </fieldset>
+}

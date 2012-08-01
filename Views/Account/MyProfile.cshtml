@@ -1,0 +1,94 @@
+﻿@model IEnumerable<SeniorDesign.Models.Rating>
+
+@{
+    ViewBag.Title = "My Profile";
+}
+
+<body>
+    <fieldset>
+        <legend>@ViewBag.Title</legend>
+        <div style="float:left;width:50%">
+@*        <div class="display-label">First:</div>
+        <div class="display-field">
+            @ViewBag.FirstName
+        </div>
+    
+        <div class="display-label">Last:</div>
+        <div class="display-field">
+            @ViewBag.LastName
+        </div>
+    *@
+    @{
+        ViewBag.Goals = new List<String>();
+        ViewBag.Goals.Add("None Choosen");
+        ViewBag.Goals.Add("Read food labels");
+        ViewBag.Goals.Add("Eat fruits/veggies");
+        ViewBag.Goals.Add("Portion control");
+        ViewBag.Goals.Add("Be active");
+        ViewBag.Goals.Add("Less computer/TV");
+        ViewBag.Goals.Add("Log blood sugars");
+        ViewBag.Goals.Add("Check ketones");
+        ViewBag.Goals.Add("Insulin injections");
+        ViewBag.Goals.Add("Rotate injections");
+        ViewBag.Goals.Add("Brush teeth");
+        ViewBag.Goals.Add("Watch low blood sugar, bring snacks");
+        ViewBag.Goals.Add("Medical bracelet");
+        ViewBag.Goals.Add("Tell friends");
+        ViewBag.Goals.Add("Remain calm when reviewing blood sugar");
+    }
+        <div class="display-label">Username: @ViewBag.UserName</div>
+        <div class="display-label">Phone: @(ViewBag.Phone)</div>
+        <div class="display-label">Email: @ViewBag.Email</div><br />
+        <div class="diaplay-label">Goal: @ViewBag.Goals[ViewBag.GoalCode]</div>
+        <p>
+        @Html.ActionLink("View your message history", "History", "Sms")
+        </p>
+        <div id="telerik-grid-container">
+        <h2>Your Progress Ratings</h2>
+        @(Html.Telerik().Chart(Model)
+              .Name("ratings_chart")
+              //.Theme(Html.GetCurrentTheme())
+              .Series(series => series.Line(s => s.rating)).Legend(false)
+              .CategoryAxis(axis => axis
+                  .Categories(s => s.timeString)
+              )
+              .ValueAxis(axis => axis
+                  .Numeric().Labels(labels => labels.Format("{0:#}")).Max(10).Min(0)
+              )
+              .Tooltip(tooltip => tooltip.Visible(true))
+              //.HtmlAttributes(new { style = "width: 600px; height: 400px; margin: auto;" })
+        )
+        
+@*        @(Html.Telerik().Grid(Model)
+                    .Name("rating_history")
+                //.DataBinding(dataBinding => dataBinding.Ajax().Select("_AjaxBinding", "Admin", new { username = ViewBag.username }))
+                    .Columns(c =>
+                    {
+                        c.Bound(m => m.rating).Width(90).Title("Rating");
+                        c.Bound(m => m.timestamp).Format("{0:MM/dd/yy}").Title("Date");
+                    })
+                    .Sortable(s => s.OrderBy(sortOrder => sortOrder.Add(m => m.timestamp).Descending()))
+                //.Pageable(p => p.Style(GridPagerStyles.Status).PageOnScroll(true).PageSize(25))
+                    .Scrollable(c => c.Enabled(true))
+                    .Resizable(resizing => resizing.Columns(true))
+                    .NoRecordsTemplate("You don't have any ratings yet!")
+        )*@
+        </div>
+
+        
+        </div>
+        <div style="float:left;width:50%"><center>
+        <h2>Points Meter</h2>    
+        <img src="http://chart.apis.google.com/chart?chs=400x200&cht=gom&chd=t:@ViewBag.points" />
+        </center>
+@*        <h3>Quizzes Complete</h3>
+        <p>
+        </p>*@
+        <p>
+        <a href="http://www.seas.upenn.edu/~msim/silver_level_cert.pdf">"Download a sample Silver Level Certificate"</a><br />
+        <a href="http://www.seas.upenn.edu/~msim/Gold_level_cert.pdf">"Download a sample Gold Level Certificate"</a>
+        </div>
+    </fieldset>
+
+
+</body>

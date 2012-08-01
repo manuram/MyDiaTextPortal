@@ -1,0 +1,65 @@
+﻿@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+
+    <div class="editor-label">
+        This nutrient is needed in small amounts for your body to work correctly. You must get these nutrients from food because your body can't make them. <br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q1" value="carbohydrates" /> Carbohydrates<br />
+        <input type="radio" name="q1" value="protein" /> Protein<br />
+        <input type="radio" name="q1" value="fat" /> Fat<br />
+        <input type="radio" name="q1" value="vitamins" /> Vitamins<br />
+        <input type="radio" name="q1" value="water" /> Water
+    </div>
+
+    <div class="editor-label">
+        This is essential for life. It does not have calories. <br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q2" value="carbohydrates" /> Carbohydrates<br />
+        <input type="radio" name="q2" value="protein" /> Protein<br />
+        <input type="radio" name="q2" value="fat" /> Fat<br />
+        <input type="radio" name="q2" value="vitamins" /> Vitamins<br />
+        <input type="radio" name="q2" value="water" /> Water
+    </div>
+
+    <div class="editor-label">
+        This nutrient has more calories per bite than any other nutrient. It also supplies energy, helps maintain healthy skin, and helps transport some vitamins. <br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q3" value="carbohydrates" /> Carbohydrates<br />
+        <input type="radio" name="q3" value="protein" /> Protein<br />
+        <input type="radio" name="q3" value="fat" /> Fat<br />
+        <input type="radio" name="q3" value="vitamins" /> Vitamins<br />
+        <input type="radio" name="q3" value="water" /> Water
+    </div>
+
+    <div class="editor-label">
+        This is another name for sugars and starches. Your body uses this for energy and needs more of this nutrient than any other.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q4" value="carbohydrates" /> Carbohydrates<br />
+        <input type="radio" name="q4" value="protein" /> Protein<br />
+        <input type="radio" name="q4" value="fat" /> Fat<br />
+        <input type="radio" name="q4" value="vitamins" /> Vitamins<br />
+        <input type="radio" name="q4" value="water" /> Water
+    </div>
+
+    <div class="editor-label">
+        This nutrient helps to build and repair muscles, skin, and every cell in the body.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q5" value="carbohydrates" /> Carbohydrates<br />
+        <input type="radio" name="q5" value="protein" /> Protein<br />
+        <input type="radio" name="q5" value="fat" /> Fat<br />
+        <input type="radio" name="q5" value="vitamins" /> Vitamins<br />
+        <input type="radio" name="q5" value="water" /> Water
+    </div>
+
+    @*<form name="input" action="html_form_action.asp" method="POST">*@
+    <br />
+    <input type="submit" value="Submit" />
+    </fieldset>
+}

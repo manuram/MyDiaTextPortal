@@ -1,0 +1,33 @@
+﻿@model SeniorDesign.Models.SmsMessage
+
+@{
+    ViewBag.Title = "Test Text Message Portal";
+}
+
+<div>
+    <div>
+    @using Twilio;
+    @using (Html.BeginForm()) {
+    @Html.ValidationSummary(true, "Could not send SMS message. Please try again.")
+    <div>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.To)
+            </div>            
+            <div class="editor-field">
+               @Html.TextBoxFor(m => m.To)
+               @Html.ValidationMessageFor(m => m.To)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Body)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(m => m.Body)
+            </div>
+    <p>
+        <input type="submit" value="Send SMS" />
+    </p>
+    </div>
+}
+    </div>
+</div>

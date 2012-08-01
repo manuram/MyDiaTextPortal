@@ -1,0 +1,10 @@
+﻿@using Twilio;
+@{
+    Response.ContentType = "text/xml";
+    var to = Request["To"];
+    var from = Request["From"];
+    var callSid = Request["SmsSid"]; // unique call ID common across requests for this call
+}
+<Response>
+     <Sms>Thanks for confirming your phone nubmer. You will begin receiving texts within a day!</Sms>
+</Response>

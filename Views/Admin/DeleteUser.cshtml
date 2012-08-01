@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Delete User";
+}
+
+<h2>Delete User</h2>
+
+    <div>
+    @using (Html.BeginForm())
+    {
+        <div class="editor-label">
+            Username to be deleted
+        </div>            
+        <div class="editor-field">
+            <input type="text" name="username" value="@ViewBag.username" />
+        </div>
+
+        <div class="editor-label">
+            Type "PERMANENTLY DELETE THIS USER" in this box to confirm
+        </div>
+        <div class="editor-field">
+            <input type="text" name="confirm" />
+        </div>
+    <p>
+        <input type="submit" value="DELETE this user" />
+</p>
+    }
+</div>

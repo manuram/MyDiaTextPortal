@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SeniorDesign.Models.MDTProfile>
+
+@{
+    ViewBag.Title = "My Profile";
+}
+    <fieldset>
+        <legend>@ViewBag.Title</legend>
+        <div>
+        <div style="float:left;width:50%">
+    
+@*        <div class="display-label">First:</div>
+        <div class="display-field">
+            @ViewBag.FirstName
+        </div>
+    
+        <div class="display-label">Last:</div>
+        <div class="display-field">
+            @ViewBag.LastName
+        </div>
+    *@
+        <div class="display-label">Username: @ViewBag.UserName</div>
+        <div class="display-label">Phone: @(ViewBag.Phone)</div>
+        <div class="display-label">Email: @ViewBag.Email</div>
+        <div class="display-label">Points and Week-by-week progress indicator coming soon!</div>
+
+        <p>
+        @Html.ActionLink("View message history", "History", new { username = @ViewBag.UserName })
+        </p>
+        </div>
+        <div style="float:left;width:50%">
+        @{ ViewBag.points = 42; }
+        <img src="http://chart.apis.google.com/chart?chs=300x200&cht=gom&chd=t:@ViewBag.points" />
+        </div>
+        </div>
+    </fieldset>
+
+        <div>
+    @using (Html.BeginForm("SendForm", "Admin",FormMethod.Post))
+    {
+        <fieldset>
+        <legend>Send @ViewBag.UserName a message</legend>
+        <div class="editor-label">
+            Message to Send
+        </div>
+        <div class="editor-field">
+            <input type="text" size="800px" name="message" />
+            <input type="hidden" name="to" value="@ViewBag.Phone"? />
+        </div>
+        <p>
+            <input type="submit" value="Send" />
+        </p>
+        </fieldset>
+        }
+        </div>
+    

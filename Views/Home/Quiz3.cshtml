@@ -1,0 +1,61 @@
+﻿@using (Html.BeginForm())
+{
+<fieldset>
+   <legend>@ViewBag.Title</legend>
+    <input type="hidden" name="quiznumber" value="3" />
+    <div class="editor-label">
+        Eating more carbs than usual.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q1" value="high" /> High<br />
+        <input type="radio" name="q1" value="low" /> Low
+    </div>
+
+    <div class="editor-label">
+        Less activity than usual.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q2" value="high" /> High<br />
+        <input type="radio" name="q2" value="low" /> Low
+    </div>
+
+<div class="quizquestion">Forgetting to take diabetes medicine.<br />
+<input type="radio" name="q3" value="high" /> High<br />
+<input type="radio" name="q3" value="low" /> Low
+</div>
+
+<div class="quizquestion">Being sick.<br />
+<input type="radio" name="q4" value="high" /> High<br />
+<input type="radio" name="q4" value="low" /> Low
+</div>
+
+<div class="quizquestion">Increased stress at school or home. <br />
+<input type="radio" name="q5" value="high" /> High<br />
+<input type="radio" name="q5" value="low" /> Low
+</div>
+
+<div class="quizquestion">More physical activity than usual.<br />
+<input type="radio" name="q6" value="high" /> High<br />
+<input type="radio" name="q6" value="low" /> Low
+</div>
+
+<div class="quizquestion">A late or skipped meal.<br />
+<input type="radio" name="q7" value="high" /> High<br />
+<input type="radio" name="q7" value="low" /> Low
+</div>
+
+<div class="quizquestion">Taking more diabetes medicine than on your plan.<br />
+<input type="radio" name="q8" value="high" /> High<br />
+<input type="radio" name="q8" value="low" /> Low
+</div>
+
+<div class="quizquestion">Eating less than usual. <br />
+<input type="radio" name="q9" value="high" /> High<br />
+<input type="radio" name="q9" value="low" /> Low
+</div>
+
+    @*<form name="input" action="html_form_action.asp" method="POST">*@
+    <br />
+    <input type="submit" value="Submit" />
+    </fieldset>
+}

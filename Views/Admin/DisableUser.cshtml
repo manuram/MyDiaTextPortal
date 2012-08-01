@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Disable User";
+}
+
+<h2>DisableUser</h2>
+
+    <div>
+    @using (Html.BeginForm())
+    {
+    <div>
+            <div class="editor-label">
+                Username to be disabled
+            </div>            
+            <div class="editor-field">
+               <input type="text" name="username" value="@ViewBag.username"/>
+            </div>
+
+            <div class="editor-label">
+               Type "DISABLE THIS USER" in this box to confirm
+            </div>
+            <div class="editor-field">
+                <input type="text" name="confirm" />
+            </div>
+    <p>
+        <input type="submit" value="Disable this user" />
+    </p>
+    </div>
+    }
+</div>

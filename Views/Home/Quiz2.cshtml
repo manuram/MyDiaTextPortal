@@ -1,0 +1,62 @@
+﻿@using (Html.BeginForm())
+{
+<fieldset>
+    <legend>@ViewBag.Title</legend>
+    <input type=hidden name="quiznumber" value="2" />
+    <div class="editor-label">
+        The amount of glucose, or sugar, in your blood.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q1" value="insulin" /> Insulin<br />
+        <input type="radio" name="q1" value="bloodglucose" /> Blood Glucose<br />
+        <input type="radio" name="q1" value="pancreas" /> Pancreas<br />
+        <input type="radio" name="q1" value="liver" /> Liver<br />
+        <input type="radio" name="q1" value="bodyfat" /> Body Fat
+    </div>
+    <div class="editor-label">
+        Excess food and glucose is generally stored as this. <br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q2" value="insulin" /> Insulin<br />
+        <input type="radio" name="q2" value="bloodglucose" /> Blood Glucose<br />
+        <input type="radio" name="q2" value="pancreas" /> Pancreas<br />
+        <input type="radio" name="q2" value="liver" /> Liver<br />
+        <input type="radio" name="q2" value="bodyfat" /> Body Fat
+    </div>
+    
+    <div class="editor-label">
+        A hormone that is needed to move glucose from the blood stream into cells to be used for energy.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q3" value="insulin" /> Insulin<br />
+        <input type="radio" name="q3" value="bloodglucose" /> Blood Glucose<br />
+        <input type="radio" name="q3" value="pancreas" /> Pancreas<br />
+        <input type="radio" name="q3" value="liver" /> Liver<br />
+        <input type="radio" name="q3" value="bodyfat" /> Body Fat
+    </div>
+
+    <div class="editor-label">
+        This organ has many jobs including making glucose.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q4" value="insulin" /> Insulin<br />
+        <input type="radio" name="q4" value="bloodglucose" /> Blood Glucose<br />
+        <input type="radio" name="q4" value="pancreas" /> Pancreas<br />
+        <input type="radio" name="q4" value="liver" /> Liver<br />
+        <input type="radio" name="q4" value="bodyfat" /> Body Fat
+    </div>
+
+    <div class="editor-label">
+        This organ produces insulin and other hormones.<br />
+    </div>
+    <div class="editor-field">
+        <input type="radio" name="q5" value="insulin" /> Insulin<br />
+        <input type="radio" name="q5" value="bloodglucose" /> Blood Glucose<br />
+        <input type="radio" name="q5" value="pancreas" /> Pancreas<br />
+        <input type="radio" name="q5" value="liver" /> Liver<br />
+        <input type="radio" name="q5" value="bodyfat" /> Body Fat
+    </div>
+    <br />
+    <input type="submit" value="Submit" />
+    </fieldset>
+}

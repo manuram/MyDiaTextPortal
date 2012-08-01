@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Learn More";
+}
+
+<h2>Learn More</h2>
+
+<p>When you have registered and confirmed your account, use the buttons below to simulate sample text messages to your mobile phone.  You must be logged in to receive the sample text messages. If you text “profile” to MyDiaText at 215-987-4342, you will receive a text message reply with your username and the goal you chose upon registering.</p>
+<p>@Html.ActionLink("Click here to recieve a sample reminder message","GenerateSMS","Sms", new { phoneTo = ViewBag.userphone, code = ViewBag.GoalCode },null) 
+ Reminder messages are tailored to the behavior goal you chose when registering.  You will receive a reminder message once a day throughout the program. They will help you stay on track to reach your goal!  If you want to view all the reminder messages that you have received since registering, you can check out your message history on the profile page by clicking on the profile tab above. </p>
+<p>
+@Html.ActionLink("Click here to recieve a sample question message","GenerateQuestionSMS","Sms",new { phoneTo = ViewBag.userphone, code = ViewBag.GoalCode },null) 
+Question messages will ask you to rate your progress.  Your reply should be a rating on a 1 to 10 scale (with 10 being the highest).  The number you reply with should reflect how well you have done to reach your goal since you last rated yourself.  Be honest!  Remember that learning to live with diabetes takes time and practice.  No one expects you to be perfect right off the bat. MyDiaText is here to help you if you are struggling to reach your goal!</p>
+<p>You can view your profile by clicking on the profile tab above.  Your participation points will show up on your profile page.  Participation points are earned if you have been showing good progress toward your goal.  You can also earn participation points by taking quizzes.  To take a quiz, click on the quizzes tab above.  The quizzes are meant to teach you more about living with diabetes. Take one! </p>
+<p>The links tab is a great resource for online information.  It has links to helpful nutrition websites, medical websites, and even games!</p>
+<p>We hope you enjoy using MyDiaText! Go reach your goal!</p>
